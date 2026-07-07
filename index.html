@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My OS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="
+margin:0;
+overflow:hidden;
+background-image:url('./pic.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+font-family:'Segoe UI',sans-serif;
+">
+
+<!-- ================= TOP BAR ================= -->
+
+<div id="topBar" class="topBar">
+
+    <button id="welcomeopen" class="welcomeopen">
+        🏠︎ Home
+    </button>
+
+
+<!-- ================= CLOCK ================= -->
+
+<p id="timeElement" class="time">
+    Loading...
+</p>
+
+</div>
+
+
+<!-- ================= WINDOW ================= -->
+
+<div id="welcome" class="window">
+
+    <!-- Title Bar -->
+
+    <div id="welcomeheader" class="titleBar">
+
+        <span style="
+        font-size:26px;
+        font-weight:700;
+        ">
+            Welcome To My OS
+        </span>
+
+        <span id="welcomeclose" class="closeButton">
+            ✕
+        </span>
+
+    </div>
+
+    <!-- Window Content -->
+
+    <div style="padding:25px;">
+
+        <h2 style="
+        margin-top:0;
+        font-size:32px;
+        ">
+            Introduction
+        </h2>
+
+        <p style="
+        font-size:19px;
+        line-height:1.65;
+        color:rgb(225,225,225);
+        ">
+
+            My name is Nikhil and I'm 17 years old. I have always been passionate about both software and hardware
+            (psst... mostly hardware). I came across Hack Club a few days ago and was immediately intrigued.
+
+            <br><br>
+
+            When I first saw the shop, I assumed it was only for people who spent years coding, but after looking
+            around I realized the rewards are actually very achievable if you put in the work.
+
+            <br><br>
+
+            So here I am, writing this website while slowly building my own browser-based OS.
+            Hopefully someone is bored enough to read this. :)
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+function updateTime(){
+
+    const now = new Date();
+
+    document.getElementById("timeElement").innerHTML =
+        now.toLocaleDateString() + ", " +
+        now.toLocaleTimeString();
+
+}
+
+updateTime();
+
+setInterval(updateTime,1000);
+
+</script>
+
+</body>
+
+</html>
