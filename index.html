@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+   <head>
     <meta charset="UTF-8">
-    <title>My OS</title>
+    <title>ChemOS</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
+<div id = "bootScreen">
+
+    <div id = "bootContainer"> 
+
+        <h1> BreakingBadOS BIOS </h1>
+
+        <p>White Industries Computer Systems</p>
+
+        <p>Copyright (c) 2026</p>
+
+        <br>
+
+        <p id = "line1" class = "bootLine"></p>
+        <p id = "line2" class = "bootLine"></p>
+        <p id = "line3" class = "bootLine"></p>
+        <p id = "line4" class = "bootLine"></p>
+        <p id = "line5" class = "bootLine"></p>
+        <p id = "line6" class = "bootLine"></p>
+
+        <br>
+        <p id = "status"></p>
+
+        <button id = "bootButton" style = "display:none;">
+            Boot To Mr White's Lab
+        </button>
+
+    </div>
+
+    <audio id="introMusic">
+
+    <source src="Intro.mp3" type="audio/mpeg">
+
+</audio>
+</div>
+
+
+<div id = "desktop" >
+
+ 
 
 <body style="
 margin:0;
@@ -17,37 +57,44 @@ background-size:cover;
 font-family:'Segoe UI',sans-serif;
 ">
 
-<!-- ================= TOP BAR ================= -->
-
 <div id="topBar" class="topBar">
 
     <button id="welcomeopen" class="welcomeopen">
-        🏠︎ Home
+        🏠 Home
     </button>
 
-
-<!-- ================= CLOCK ================= -->
-
-<p id="timeElement" class="time">
-    Loading...
-</p>
+    <p id="timeElement" class="time">
+        Loading...
+    </p>
 
 </div>
 
+<div class="desktop">
 
-<!-- ================= WINDOW ================= -->
+    <div id="notesIcon" class="appsIcon">
+
+        <img
+            src="./Notes.png"
+            width="50"
+            height="50"
+            draggable="false"
+            style="border-radius:16px;"
+        >
+
+        <p class="iconText">
+            ChemNotes
+        </p>
+
+    </div>
+
+</div>
 
 <div id="welcome" class="window">
 
-    <!-- Title Bar -->
-
     <div id="welcomeheader" class="titleBar">
 
-        <span style="
-        font-size:26px;
-        font-weight:700;
-        ">
-            Welcome To My OS
+        <span class="windowTitle">
+            Welcome To BreakingBadOS
         </span>
 
         <span id="welcomeclose" class="closeButton">
@@ -56,43 +103,95 @@ font-family:'Segoe UI',sans-serif;
 
     </div>
 
-    <!-- Window Content -->
+   <div class="windowContent" style="position:relative; min-height:430px;">
 
-    <div style="padding:25px;">
+    <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    ">
+
+        <img
+            src="./WalterWhite.jpg"
+            style="
+            width: 260px;
+            max-height: 400px;
+            border-radius:14px;
+            box-shadow:0 8px 25px rgba(0,0,0,.45);
+            ">
 
         <h2 style="
-        margin-top:0;
-        font-size:32px;
+        margin-top:25px;
+        margin-bottom:0;
+        font-weight:500;
+        color:rgb(201, 199, 199);
+        font-family: 'Oswald', sans-serif;
         ">
-            Introduction
+            "I AM THE ONE WHO KNOCKS."
         </h2>
 
-        <p style="
-        font-size:19px;
-        line-height:1.65;
-        color:rgb(225,225,225);
-        ">
+    </div>
 
-            My name is Nikhil and I'm 17 years old. I have always been passionate about both software and hardware
-            (psst... mostly hardware). I came across Hack Club a few days ago and was immediately intrigued.
+    <div style="
+    position:absolute;
+    bottom:18px;
+    right:18px;
+    text-align:right;
+    font-size:12px;
+    color:rgba(255,255,255,.55);
+    line-height:1.5;
+    ">
 
-            <br><br>
+        Music:
+        <br>
 
-            When I first saw the shop, I assumed it was only for people who spent years coding, but after looking
-            around I realized the rewards are actually very achievable if you put in the work.
+        Breaking Bad Theme Song
+        <br>
 
-            <br><br>
+        Audio Garage
+        <br>
 
-            So here I am, writing this website while slowly building my own browser-based OS.
-            Hopefully someone is bored enough to read this. :)
+        CC BY 4.0
+        <br>
 
-        </p>
+        Copyright Free BTW
+
+    </div>
+
+</div>
+
+</div>
+
+<div id="notesWindow" class="window" style="display:none; width:650px; min-height:430px;">
+
+    <div id="notesHeader" class="titleBar">
+
+        <span class="windowTitle">
+            ChemNotes
+        </span>
+
+        <span id="notesClose" class="closeButton">
+            ✕
+        </span>
+
+    </div>
+
+    <div class="windowContent">
+
+        <textarea
+            id="notesArea"
+            class="notesArea"
+            placeholder="Start writing... ;)"
+        ></textarea>
 
     </div>
 
 </div>
 
 <script src="script.js"></script>
+
+
 
 <script>
 
@@ -101,7 +200,8 @@ function updateTime(){
     const now = new Date();
 
     document.getElementById("timeElement").innerHTML =
-        now.toLocaleDateString() + ", " +
+        now.toLocaleDateString() +
+        ", " +
         now.toLocaleTimeString();
 
 }
@@ -113,5 +213,6 @@ setInterval(updateTime,1000);
 </script>
 
 </body>
+</div>
 
 </html>
