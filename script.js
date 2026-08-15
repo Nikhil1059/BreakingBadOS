@@ -3,7 +3,7 @@ const welcomeHeader = document.getElementById("welcomeheader");
 const welcomeClose = document.getElementById("welcomeclose");
 const welcomeOpen = document.getElementById("welcomeopen");
 
-const DEV_MODE = false;
+const DEV_MODE = true;
 
 const notesWindow = document.getElementById("notesWindow");
 const notesHeader = document.getElementById("notesHeader");
