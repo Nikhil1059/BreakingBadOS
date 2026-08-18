@@ -4,7 +4,7 @@ const welcomeClose = document.getElementById("welcomeclose");
 const welcomeOpen = document.getElementById("welcomeopen");
 const resetApps = document.getElementById("resetApps")
 
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 const notesWindow = document.getElementById("notesWindow");
 const notesHeader = document.getElementById("notesHeader");
