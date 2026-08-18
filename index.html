@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakingBadOS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="
+margin:0;
+overflow:hidden;
+background-image:url('./pic.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+font-family:'Segoe UI',sans-serif;
+">
+
+<!-- ================= BOOT SCREEN ================= -->
+
+<div id="bootScreen">
+
+    <div id="bootContainer">
+
+        <h1>BreakingBadOS BIOS</h1>
+
+        <p>White Industries Computer Systems</p>
+
+        <p>Copyright (c) 2026</p>
+
+        <br>
+
+        <p id="line1" class="bootLine"></p>
+        <p id="line2" class="bootLine"></p>
+        <p id="line3" class="bootLine"></p>
+        <p id="line4" class="bootLine"></p>
+        <p id="line5" class="bootLine"></p>
+        <p id="line6" class="bootLine"></p>
+
+        <br>
+
+        <p id="status"></p>
+
+        <button id="bootButton" style="display:none;">
+            Boot To Mr White's Lab
+        </button>
+
+    </div>
+
+    <audio id="introMusic">
+        <source src="Intro.mp3" type="audio/mpeg">
+    </audio>
+
+</div>
+
+<!-- ================= DESKTOP ================= -->
+
+<div id="desktop">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div id="topBar" class="topBar">
+
+        <button id="welcomeopen" class="welcomeopen">
+            🏠 Home
+        </button>
+
+        <button  id = "resetApps" class = "welcomeopen">
+           🗘 Reset
+        </button>
+
+        <p id="timeElement" class="time">
+            Loading...
+        </p>
+
+    </div>
+
+    <!-- ================= DESKTOP ICONS ================= -->
+
+    <div class="desktop">
+
+        <div id="notesIcon" class="appsIcon" style = "left:20px; top:100px;">
+
+            <img
+                src="./Notes.png"
+                width="50"
+                height="50"
+                draggable="false"
+                style="border-radius:16px;">
+
+            <p class="iconText">
+                ChemNotes
+            </p>
+
+        </div>
+
+        <div id = "terminalIcon" class = "appsIcon" style = "left:20px; top:0px;">
+
+            <img 
+                src="./terminal_icon.png"
+                width = "50"
+                height = "50"
+                draggable="false"
+                style = "border-radius: 16px;">
+
+            <p class = "iconText">
+                Terminal
+            </p>
+
+
+        </div>
+
+    </div>
+
+    <!-- ================= HOME WINDOW ================= -->
+
+    <div id="welcome" class="window">
+
+        <div id="welcomeheader" class="titleBar">
+
+            <span class="windowTitle">
+                Welcome To BreakingBadOS
+            </span>
+
+            <span id="welcomeclose" class="closeButton">
+                ✕
+            </span>
+
+        </div>
+
+        <div class="windowContent" style="position:relative; min-height:430px;">
+
+            <div style="
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            ">
+
+                <img
+                    src="./WalterWhite.jpg"
+                    style="
+                    width:260px;
+                    max-height:400px;
+                    border-radius:14px;
+                    box-shadow:0 8px 25px rgba(0,0,0,.45);
+                    ">
+
+                <h2 style="
+                margin-top:25px;
+                margin-bottom:0;
+                font-weight:500;
+                color:rgb(201,199,199);
+                font-family:'Oswald',sans-serif;
+                ">
+                    "I AM THE ONE WHO KNOCKS."
+                </h2>
+
+            </div>
+
+            <div style="
+            position:absolute;
+            bottom:18px;
+            right:18px;
+            text-align:right;
+            font-size:12px;
+            color:rgba(255,255,255,.55);
+            line-height:1.5;
+            ">
+
+                Music:<br>
+
+                Breaking Bad Theme Song<br>
+
+                Audio Garage<br>
+
+                CC BY 4.0<br>
+
+                Copyright Free BTW
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <div id="notesWindow" class="window" style="display:none; width:650px; min-height:430px;">
+
+        <div id="notesHeader" class="titleBar">
+
+            <span class="windowTitle">
+                ChemNotes
+            </span>
+
+            <span id="notesClose" class="closeButton">
+                ✕
+            </span>
+
+        </div>
+
+        <div class="windowContent">
+
+            <textarea
+                id="notesArea"
+                class="notesArea"
+                placeholder="Start writing... ;)"
+            ></textarea>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+function updateTime(){
+
+    const now = new Date();
+
+    document.getElementById("timeElement").innerHTML =
+        now.toLocaleDateString() +
+        ", " +
+        now.toLocaleTimeString();
+
+}
+
+updateTime();
+
+setInterval(updateTime,1000);
+
+</script>
+
+</body>
+
+</html>
