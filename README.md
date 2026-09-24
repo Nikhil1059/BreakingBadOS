@@ -14,3 +14,7 @@ Thanks for checking out my project! See you later in my next one ;)
 **Here's the link to view this website:
  https://nikhil1059.github.io/BreakingBadOS/**
 
+---
+
+<img src="./WalterWhite.jpg" alt="Alt text" width="500">
+
