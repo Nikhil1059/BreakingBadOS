@@ -1,8 +1,16 @@
 # BreakingBadOS
-This is a os in the web! Its not fully finished yet tbh i just started but i have some cool features in mind to add;)
+This is a OS in the web! It's finished now and I know it's not much cause I didn't really spend much time but its smtg I did in my free time.
 
-For now It has a cool starting page and also a good intro page.
-It for now only contain one app which is the notes app and you can write anything is that and close it and open again and it saves the text.
-Also the speciality of this website is of coarse the theme and also the design I worked hard for the glassmorphism so i hope it looks cool.
-Also the icon on the desktop acts like a normal windows desktop so you can drag it and place it anywhere and again it'll remember that and the 
-icon will stay there even after reloading the age.
+The features it has:
+1. It has a cool opening screen and also intro.
+2. It has an app called chem Notes which mr. Walter uses to note down formulas ofcoarse.
+3. It has a terminal which does everything that Mr. Walter needs.
+4. There is also a calendar thats pops up when you click the date.
+5. The are also buttons to re-arrange the icons after you messed with them and to open the home tab.
+6. Also all tabs are resizable.
+
+Thanks for checking out my project! See you later in my next one ;)
+
+**Here's the link to view this website:
+ https://nikhil1059.github.io/BreakingBadOS/**
+
